@@ -1,0 +1,17 @@
+ALGORITHM Insertion_Sort
+VAR
+   tab : ARRAY_OF INTEGER[50];
+   n : INTEGER := length(tab);
+   eltAct,j : INTEGER := 0;
+BEGIN
+    
+    FOR var i:=1 FROM 1 TO n-1 STEP 1 DO
+        eltAct := tab[i];
+        j := i-1 ;
+        WHILE (j >= 0 and tab[j] > eltAct) DO
+            tab[j+1] := tab[j];
+            j := j-1;
+        END_WHILE
+         tab[j+1] := eltAct;
+    END_FOR
+END
